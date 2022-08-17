@@ -35,6 +35,10 @@ output "email" {
 #  description  = "Some description."
 #  organization = data.tfe_organization.foo.name
 #}
+resource "tfe_workspace_variable_set" "test" {
+  workspace_id    = "tfe_variable_set"
+  variable_set_id = tfe_variable_set.test.id
+}
 resource "tfe_variable_set" "test" {
   name          = "Test Varset"
   description   = "Some description."
