@@ -1,4 +1,12 @@
 terraform {
+  cloud {
+    organization = "cdunlap"
+    workspaces {
+      name = "tfe_variable_set"
+    }
+  }
+}
+terraform {
   required_providers {
     tfe = {
       source  = "hashicorp/tfe"
