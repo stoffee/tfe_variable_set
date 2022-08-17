@@ -44,3 +44,10 @@ resource "tfe_variable_set" "test" {
   description   = "Some description."
   organization  = "cdunlap"
 }
+resource "tfe_variable" "test-a" {
+  key             = "seperate_variable"
+  value           = "my_value_name"
+  category        = "terraform"
+  description     = "a useful description"
+  variable_set_id = tfe_variable_set.test.id
+}
