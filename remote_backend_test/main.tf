@@ -38,7 +38,7 @@ terraform {
 
 data "tfe_workspace" "test" {
   name         = "tfe_variable_set"
-  organization = tfe_organization.test.name
+  organization = "cdunlap"
 }
 resource "tfe_workspace_variable_set" "test" {
   workspace_id    = "tfe_variable_set"
