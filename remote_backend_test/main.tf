@@ -16,19 +16,19 @@ terraform {
   }
 }
 
-data "tfe_organization" "foo" {
-  name = "cdunlap"
-}
+#data "tfe_organization" "foo" {
+#  name = "cdunlap"
+#}
 
-output "org" {
-  description = "Org Name"
-  value       = data.tfe_organization.foo.name
-}
+#output "org" {
+#  description = "Org Name"
+#  value       = data.tfe_organization.foo.name
+#}
 
-output "email" {
-  description = "Org Email"
-  value       = data.tfe_organization.foo.email
-}
+#output "email" {
+#  description = "Org Email"
+#  value       = data.tfe_organization.foo.email
+#}
 
 #resource "tfe_variable_set" "test" {
 #  name         = "Test Varset"
