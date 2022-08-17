@@ -30,8 +30,13 @@ output "email" {
   value       = data.tfe_organization.foo.email
 }
 
+#resource "tfe_variable_set" "test" {
+#  name         = "Test Varset"
+#  description  = "Some description."
+#  organization = data.tfe_organization.foo.name
+#}
 resource "tfe_variable_set" "test" {
-  name         = "Test Varset"
-  description  = "Some description."
-  organization = data.tfe_organization.foo.name
+  name          = "Test Varset"
+  description   = "Some description."
+  organization  = "cdunlap"
 }
